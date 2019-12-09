@@ -24,35 +24,37 @@ Lingyu Li
 
 ## 2. Rouge Score for text summarization
 
-Metric: Rouge score (Recall-Oriented Understudy for Gisting Evaluation)
+#### Metric: Rouge score (Recall-Oriented Understudy for Gisting Evaluation)
  - Rouge N: measure N-gram overlap between model output summary and reference summary
  - Rouge L: measures longest matching sequence of words using LCS(longest Common Subsequence)
-Rouge score is composed of: 
+
+#### Rouge score is composed of: 
 - Precision = # of overlapping words / total words in the reference summary
 - Recall = # of overlapping words / total workds in the model generated summary
 - F1-score
-Interpretation:
+
+#### Interpretation:
 - ROUGE-n recall=40% : 40% of the n-grams in the reference summary are also present in the generated summary.
 - ROUGE-n precision=40% : 40% of the n-grams in the generated summary are also present in the reference summary.
 - ROUGE-n F1-score=40% is like any F1-score.
 
 
 ## 3. Word Frequency Algorithm
-    Bag of words based algorithm
-    compute word frequency
-    score each sentence according to word frequency (can be weighted)
-    generate threshold of sentence selection (average score, etc.)
-    Selected sentence (score > threshold) as summary
+#### Steps
+    a. Bag of words based algorithm
+    b. compute word frequency
+    c. score each sentence according to word frequency (can be weighted)
+    d. generate threshold of sentence selection (average score, etc.)
+    e. Selected sentence (score > threshold) as summary
 
 ## 4. TextRank Algorithms
-    Graph based algorithm
+    #### Graph based algorithm Basic steps
 
-    Basic steps
-    Cleaning Text (remove punctuation, Stopwords, stemming)
-    Vector representation of sentences: This part can be customized by using different pre-trained vectorization models or train your own model
-    Use cosine similarity find similarity of sentences
-    Apply PageRank algorithm: use networkx(networkx.score) to rank sentences
-    Extract top N sentences as summary
+    a. Cleaning Text (remove punctuation, Stopwords, stemming)
+    b. Vector representation of sentences: This part can be customized by using different pre-trained vectorization models or train your own model
+    c. Use cosine similarity find similarity of sentences
+    d. Apply PageRank algorithm: use networkx(networkx.score) to rank sentences
+    e. Extract top N sentences as summary
     Skip implementation, there are >3 existing packages using graph
 
 ## 5. Kmean clustering of sentence embedding using Bert
