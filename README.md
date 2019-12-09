@@ -76,7 +76,14 @@ Implementation
 
 ### 6. Test and Compare using Opinosis Dataset
 
+Mean ROUGE 1-gram F1-score:
+
+Word Frequency model: 0.100
+Text Rank model: 0.091
+Kmeans clustering BERT: 0.116
+
 It seems the clustering summary using BERT embedding is slightly better than word frequency and text rank model summary!
+
 
 Future work could be considered to
 1) Try out different BERT layers to produce the latent vectors (word embedding)
