@@ -1,0 +1,4 @@
+spacy
+nltk
+pytextrank
+gensim
