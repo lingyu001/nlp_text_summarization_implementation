@@ -76,10 +76,11 @@ Implementation
 
 ### 6. Test and Compare using Opinosis Dataset
 
-    It seems the clustering summary using BERT embedding is slightly better than word frequency and text rank model summary!
-    Future work could be considered to
-    1) Try out different BERT layers to produce the latent vectors (word embedding)
-    2) Try different pooling strategy from word vector to sentence vectors
-    3) Some other clustering method
-    Use supervise learning to fine tune BERT model for summarization purpose could be another topic to develop
+It seems the clustering summary using BERT embedding is slightly better than word frequency and text rank model summary!
+
+Future work could be considered to
+1) Try out different BERT layers to produce the latent vectors (word embedding)
+2) Try different pooling strategy from word vector to sentence vectors
+3) Some other clustering method
+Use supervise learning to fine tune BERT model for summarization purpose could be another topic to develop
     https://arxiv.org/pdf/1903.10318.pdf
